@@ -1,7 +1,7 @@
 function out = mycentroids(filename, Threshold, DilationRadius, AreaMin,...
     AreaMax, IntensityMax, EccentricityMax, plotflag)
 
-load(['C:/Users/student/Documents/Aerotaxis Data/bac_bright/' filename]);
+load(['C:/Users/student/Documents/GitHub/aerotaxis/data/cereus_bright/' filename]);
 MicroSphereFrames = eval(filename(1:end-4))*16; % gain up from 12 to 16 bit
 MicroSphereCentroids = [];
 % CentroidOnOffSwitch = [];
