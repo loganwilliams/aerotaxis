@@ -8,7 +8,7 @@ MicroSphereCentroids = [];
 NewLineCount = 0;
 numFrames = size(MicroSphereFrames, 4);
 
-fprintf('numer of frame: %d',numFrames);
+fprintf('number of frames: %d',numFrames);
 
 for i = 1:numFrames
 %     [BinnedIntensity IntensityBins] = imhist(MicroSphereFrames(:,:,1,i),2^16);
@@ -29,7 +29,7 @@ for i = 1:numFrames
     FrameBoundingBox = cat(1,STATS(:).BoundingBox);
     FrameMaxIntensity = cat(1,STATS(:).MaxIntensity);
     FrameEccentricity = cat(1,STATS(:).Eccentricity);    
-    fprintf('frame max intensirty:%d   , %d \n', FrameMaxIntensity,FrameEccentricity);
+    fprintf('frame max intensity:%d   , %d \n', FrameMaxIntensity,FrameEccentricity);
     
     AreaSwitch = ~((FrameArea < AreaMin) | (FrameArea > AreaMax));
     SaturatedSwitch = ~(FrameMaxIntensity > floor(IntensityMax*2^16));
