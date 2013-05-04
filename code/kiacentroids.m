@@ -15,7 +15,7 @@ end
 
 
 fLoad=load([optionalFolder filename]);
-[p,filePref,e]=fileparts(filename);
+[~,filePref,e]=fileparts(filename);
 MicroSphereFrames = fLoad.(filePref)*16; % gain up from 12 to 16 bit
 
 if nargin==5
