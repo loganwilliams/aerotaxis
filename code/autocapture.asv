@@ -1,0 +1,17 @@
+vid = videoinput('gige', 1, 'Mono12');
+src = getselectedsource(vid);
+vid.FramesPerTrigger = 30;
+triggerconfig(vid, 'manual');
+src.AcquisitionFrameRateAbs = 15;
+src.ExposureAuto = 'Off';
+src.ExposureTimeAbs = 650;
+vid.LoggingMode = 'memory';
+imaqmem(4000000000);
+
+start(vid)
+
+for t = 1:80
+    
+
+data = getdata(vid);
+save('data.mat', 'data');
