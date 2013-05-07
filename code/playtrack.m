@@ -1,6 +1,6 @@
-function out = playcentroids(filename, FrameCentroids)
+function out = playcentroids(filename, FrameCentroids, folder)
 
-load(['C:/Users/Kiarash/Dropbox/aerotaxis/data/5_2/' filename]);
+load([folder filename]);
 OverlayHandle = figure(4);
 figure(OverlayHandle);
 %figure('Visible', 'on');
