@@ -1,9 +1,9 @@
-function out=findV(tracks)
+function out=findFinalV(tracks)
     allV=[];
     allTheta=[];
     for i = 1:max(tracks(:,3))
         tempCent=tracks((tracks(:,3)==i),1:2);
-        [v,theta]=findOneV(tempCent,0);
+        [v,theta]=findOneFinalV(tempCent,0);
         allV=[allV;v];
         allTheta=[allTheta;theta];
     end
@@ -11,10 +11,11 @@ function out=findV(tracks)
 out=[allV,allTheta];   
 end
 
-function [v, theta] = findOneV(position, plotflag)
-    position;
-    vx = diff(position(:,1));
-    vy = diff(position(:,2));
+function [v, theta] = findOneFinalV(position, plotflag)
+    n = nnz(position) / 2;
+    
+    vx = position(n,1) - position(1,1);
+    vy = position(n,2) - position(1,2);
     v  = sqrt( vx.^2 + vy.^2 );
     theta = atan2( vy , vx );
 

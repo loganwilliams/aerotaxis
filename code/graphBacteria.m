@@ -1,4 +1,4 @@
-function [to_dx, tn_dx] = graphBacteria(id,nFrames,folder)  
+function [allX] = graphBacteria(id,nFrames,switchPoint,folder)  
 
 % fprintf('id=0 for show a few random tracks')
 % fprintf('id=1 for count N2 vs O2 \n')
@@ -10,8 +10,9 @@ function [to_dx, tn_dx] = graphBacteria(id,nFrames,folder)
 
 to_dx = [];
 tn_dx = [];
+allX = [];
 
-trackParam=struct('mem',0,'dim',2,'good',3,'quiet',0);
+trackParam=struct('mem',0,'dim',2,'good',15,'quiet',0);
 
 switch id
     
@@ -44,7 +45,7 @@ switch id
         xlabel('Time  (x 15 seconds)');
         ylabel('Number of Bacteria visible in minimum of 3 continuous frames');
         title(['Change of Number of Bacteria Over Time']);
-        vline(44, 'b', 'Replacing N2 with O2');
+        vline(switchPoint, 'b', 'Replacing N2 with O2');
         %hold on
         %plot([44,44],[0,1000],'r');
         %hold off
@@ -79,7 +80,7 @@ switch id
         xlabel('Time (x 15 seconds)');
         ylabel('Average Speed');
         title(['Change of Avg. Speed Over Time']);
-        vline(44, 'b', 'Replacing N2 with O2');
+        vline(switchPoint, 'b', 'Replacing N2 with O2');
         
 %         hold on
 %         plot(nAvg,'-xb')
@@ -207,7 +208,23 @@ switch id
             to_dx(1:length(o_dx),i+1) = o_dx;
         end
         plot(1:21, sum(tn_dx(:,1:21)), 1:21, sum(to_dx(:,1:21)))
-                  
+    
+    case 7
+        allX = [];
+        trackParam=struct('mem',0,'dim',2,'good',15,'quiet',0);
+
+        for i = 0:nFrames
+            i
+            n_name = ['samp_' num2str((i*15)) '.mat'];
+            cents = kiacentroids(['samp_' num2str((i*15)) '.mat'], 4,40,200,0.75,0.5,0,folder);
+            tracks=track(cents,15,trackParam);
+            X=findX(tracks(:,[1,2,4]))
+            allX = [allX sum(X)];
+        end
+        figure(1);
+        plot(allX);
+        vline(switchPoint, 'k', 'Replacing N2 with O2');
+    
     otherwise
         fprintf('id=0 for show a few random tracks')
         fprintf('id=1 for count N2 vs O2 \n')
