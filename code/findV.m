@@ -1,8 +1,8 @@
 function out=findV(tracks)
     allV=[];
     allTheta=[];
-    for i = 1:max(tracks(:,3))
-        tempCent=tracks((tracks(:,3)==i),1:2);
+    for i = 1:max(tracks(:,4))
+        tempCent=tracks((tracks(:,4)==i),1:2);
         [v,theta]=findOneV(tempCent,0);
         allV=[allV;v];
         allTheta=[allTheta;theta];
@@ -12,7 +12,7 @@ out=[allV,allTheta];
 end
 
 function [v, theta] = findOneV(position, plotflag)
-
+    position;
     vx = diff(position(:,1));
     vy = diff(position(:,2));
     v  = sqrt( vx.^2 + vy.^2 );
