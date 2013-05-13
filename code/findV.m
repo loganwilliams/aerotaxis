@@ -12,7 +12,7 @@ out=[allV,allTheta];
 end
 
 function [v, theta] = findOneV(position, plotflag)
-
+    position;
     vx = diff(position(:,1));
     vy = diff(position(:,2));
     v  = sqrt( vx.^2 + vy.^2 );
