@@ -6,24 +6,19 @@ if nargin>8
 end
 switch nargin
     case {5,6}
-        optionalFolder='C:/Users/Kiarash/Dropbox/aerotaxis/data/5_2/';
+        optionalFolder='C:/Users/Kiarash/Dropbox/aerotaxis/data/1/';
         optionalPlotflag=1;
     case 7
-        optionalFolder='C:/Users/Kiarash/Dropbox/aerotaxis/data/5_2/';        
+        optionalFolder='C:/Users/Kiarash/Dropbox/aerotaxis/data/1/';        
 end
 
-
-
 fLoad=load([optionalFolder filename]);
-[~,filePref,e]=fileparts(filename);
-MicroSphereFrames = fLoad.(filePref)*16; % gain up from 12 to 16 bit
+MicroSphereFrames = fLoad.data*16; % gain up from 12 to 16 bit
 
 if nargin==5
     optionalThreshold=graythresh(MicroSphereFrames(:,:,1,10));    
     fprintf('otsu threshold is : %d \n',optionalThreshold);
 end
-
-
 
 MicroSphereCentroids = [];
 NewLineCount = 0;

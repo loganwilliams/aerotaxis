@@ -94,7 +94,7 @@ switch id
                            folder);
         tracks=track(cents,15,trackParam);
         V=findV(tracks(:,[1,2,4]));
-        y1=hist(V(:,1),myBins);
+        y1=hist(V(:,1)*V(:,myBins);
         
         i=47;
         n_name = ['samp_' num2str((i*15)) '.mat'];
