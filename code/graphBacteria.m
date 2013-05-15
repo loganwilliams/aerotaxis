@@ -88,7 +88,7 @@ switch id
 %         hleg1=legend('N_2','O_2');
 %         set(hleg1,'Location','NorthWest')        
     case 3 %histogram of Speed of N2
-        myBins=linspace(0,360,160);
+        myBins=linspace(0,9,70);
         i=10;
         n_name = ['samp_' num2str((i*15)) '.mat'];
         cents=kiacentroids(n_name, 4, 40, 200, 0.75,0.5,0,...
