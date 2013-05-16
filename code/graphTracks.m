@@ -1,4 +1,4 @@
-function graphTracks(e,switchPoint)
+function [out] = graphTracks(e,switchPoint)
 
 sumX = [];
 avgV = [];
@@ -9,11 +9,11 @@ allNr = [];
 allNd = [];
 allNu = [];
 
-for i = 70
+for i = 1:size(e,1)
     i;
     tracks = [];
     tracks(:,:) = e(i,:,:);
-    plotTracks(tracks(:,[1,2,4]))
+    %plotTracks(tracks(:,[1,2,4]))
     ntracks = nnz(tracks)/4;
     allX = findX(tracks(:,[1,2,4]));
     sumX = [sumX sum(allX)];
@@ -107,6 +107,8 @@ vline(switchPoint*15, 'k', 'Replacing N2 with O2');
 
 figure(2)
 plot(pL - pR);
+
+out = pL - pR;
 
 vline(switchPoint, 'k', 'Replacing N2 with O2');
 

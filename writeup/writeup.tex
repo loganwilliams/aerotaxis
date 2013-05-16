@@ -33,6 +33,53 @@ Aerotaxis has a broad range of applications; the signaling proteins utilized in 
 \subsection{Gas flow} % Kat?
 \subsection{Bacteria culturing} % Brian?
 \section{Results} % all of us
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=\textwidth]{plots/number_Tracks.png}
+      \caption[Number of trackable bacteria]{The number of trackable bacteria adjacent on the nitrogen side of the channel as compared to the number on the oxygen side. \\
+      
+      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The number of ``tracks'' produced corresponds to the number of trackable bacteria.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=\textwidth]{plots/average_speed.png}
+      \caption[Number of trackable bacteria]{The number of trackable bacteria adjacent on the nitrogen side of the channel as compared to the number on the oxygen side. \\
+      
+      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The number of ``tracks'' produced corresponds to the number of trackable bacteria.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=0.5\textwidth]{plots/tracks_1.png}
+    \includegraphics[width=0.5\textwidth]{plots/tracks_2.png}
+    \includegraphics[width=0.5\textwidth]{plots/tracks_3.png}
+      \caption[Representative traces]{Representative traces of bacteria motion. \\
+      
+      These plots were produced by finding bright centroids in captured microscope frames, and then finding centroids in sequential frames that are likely to belong to the same bacteria. These are plotted prior to gas flow switch, just after gas flow switch, and several minutes after gas flow switch, though no difference is apparent visually.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=\textwidth]{plots/direction.png}
+      \caption[Bacterial motion]{Motion of motile bacteria divided into four quadrants, left (towards oxygen), right (towards nitrogen, up, and down.) This shows data from one representative experiment. \\
+      
+      This graph was produced by calculating the distance traveled and direction of travel for every bacteria ``track'' in each sequence of 30 frames. Bacteria that moved a significant amount were considered ``motile,'' all other bacteria were discarded. The bacteria were divided by dividing their motion into the four previously mentioned quadrants.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=\textwidth]{plots/cum_motion.png}
+	\caption[Cumulative motion]{The cumulative percentage of net bacterial movement towards the oxygen side of the channel, averaged over 5 experimental trials. The x-axis is scaled relative to the number of visible bacteria in a single frame. \\
+      
+      This plot was produced by taking the cumulative sum of the difference between the ``left'' and ``right'' quadrants in the preceding figure. This sum is averaged over five trials. Error bars represent the standard deviation of that cumulative sum over the five trials (they grow with time because error is also being integrated in the cumulative sum). The size of the error bars is caused by a small $n$ (5), and integrated error. \\
+      
+      Note that there appears to be some drift prior to the gas line switch. This is likely due to random motion of the bacteria, and the large uncertainty in the data.}
+      
+\end{figure}
+
+
 \section{Discussion} % all of us
 
 
