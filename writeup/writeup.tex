@@ -82,6 +82,8 @@ These lines have two different configurations during the experiment, providing e
 \subsection{Bacteria Culturing} % Brian?
 \section{Results} % all of us
 
+Relevant plots and micrographs, as well as the experimental methods and data processing that produced them, are displayed and explained on the subsequent pages.
+
 \begin{figure}[h!] 
   \centering
     \includegraphics[width=\textwidth]{plots/contrast.png}
@@ -92,10 +94,23 @@ These lines have two different configurations during the experiment, providing e
 
 \begin{figure}[h!] 
   \centering
+    \includegraphics[width=0.49\textwidth]{plots/0min_new.png}
+     \includegraphics[width=0.49\textwidth]{plots/5min_new.png}
+    \includegraphics[width=0.49\textwidth]{plots/10min_new.png}
+
+      \caption[Quantitative verification of aerotaxis]{These plots represent the same data as the panorama in the previous figure, showing the density of bacteria laterally across the channel, prior to gas flow, 5 minutes after gas flow, and 10 minutes after gas flow. This shows that the gradient (slope of linear fit line), increases with time.\\
+      
+      These plots were produced from the panoramic image by summing each column in MATLAB, convolving with a rectangle function to smooth out discrete impulses, and using MATLAB to compute a linear fit.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
     \includegraphics[width=\textwidth]{plots/number_Tracks.png}
       \caption[Number of trackable bacteria]{The number of trackable bacteria adjacent on the nitrogen side of the channel as compared to the number on the oxygen side. \\
       
-      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The number of ``tracks'' produced corresponds to the number of trackable bacteria.}
+      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The number of ``tracks'' produced corresponds to the number of trackable bacteria. \\
+      
+      This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
 \end{figure}
 
 \begin{figure}[h!] 
@@ -103,7 +118,41 @@ These lines have two different configurations during the experiment, providing e
     \includegraphics[width=\textwidth]{plots/average_speed.png}
       \caption[Number of trackable bacteria]{The number of trackable bacteria adjacent on the nitrogen side of the channel as compared to the number on the oxygen side. \\
       
-      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The number of ``tracks'' produced corresponds to the number of trackable bacteria.}
+      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The distance moved by each bacteria  ``track'' was averaged every minute (for each sequence of 30 frames). \\
+      
+            This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=0.9\textwidth]{plots/directions_hist_N2.png}
+    \includegraphics[width=0.9\textwidth]{plots/directions_hist_O2.png}    
+      \caption[Histogram of direction of movement]{Histograms of direction of movement of bacteria on the nitrogen side of the channel (top), and on the oxygen side (bottom). Note that there is no discernible trend towards a particular direction in either case. \\
+      
+      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. These ``tracks'' were analyzed to find the direction of movement of each bacteria from frame to frame. This list of directions of movement was then plotted as a histogram for each minute (30 frames) of captured data. \\
+      
+            This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=0.86\textwidth]{plots/histograms_N2.png}
+    \includegraphics[width=0.86\textwidth]{plots/histograms_O2.png}    
+      \caption[Histogram of speed of movement]{Histograms of speed of bacterial movement on the nitrogen side of the channel (top), and on the oxygen side (bottom). Note that there is no discernible change over time in either case. Note also that a significant number of bacteria have speeds very close to zero. This is due to the ``stickiness'' of PDMS, a problem which was later rectified by coating the PDMS channel in bovine serum albumin (BSA), which acts to lubricate the channel. \\
+      
+      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. These ``tracks'' were analyzed to find the average speed of movement of each bacteria from frame to frame. This list of directions of movement was then plotted as a histogram for each minute (30 frames) of captured data. \\
+      
+            This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=\textwidth]{plots/speed_histogram.jpg}
+      \caption[Number of trackable bacteria]{The distribution of  speed of bacteria in a channel coated with BSA, at three points in time --- while flowing nitrogen through both gas channels, while flowing nitrogen through one gas channel and oxygen through the other, and while transitioning between the two flows.\\
+      
+      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. Then, a histogram was produced of the distribution of the amount of movement of each bacteria between subsequent frames. \\
+      
+            This experiment was conducted by placing bacteria in the center channel, and starting a flow of nitrogen through both outer channels. A sequence of 30 frames was taken, at 15 fps, in the center of the channel. This was repeated every 15 seconds for approximately 10 minutes, then one of the nitrogen gas lines was switched to oxygen, and the experiment continued for another 10 minutes.}
 \end{figure}
 
 \begin{figure}[h!] 
@@ -121,7 +170,9 @@ These lines have two different configurations during the experiment, providing e
     \includegraphics[width=\textwidth]{plots/direction.png}
       \caption[Bacterial motion]{Motion of motile bacteria divided into four quadrants, left (towards oxygen), right (towards nitrogen, up, and down.) This shows data from one representative experiment. \\
       
-      This graph was produced by calculating the distance traveled and direction of travel for every bacteria ``track'' in each sequence of 30 frames. Bacteria that moved a significant amount were considered ``motile,'' all other bacteria were discarded. The bacteria were divided by dividing their motion into the four previously mentioned quadrants.}
+      This graph was produced by calculating the distance traveled and direction of travel for every bacteria ``track'' in each sequence of 30 frames. Bacteria that moved a significant amount were considered ``motile,'' all other bacteria were discarded. The bacteria were divided by dividing their motion into the four previously mentioned quadrants. \\
+      
+      This experiment was conducted by placing bacteria in the center channel, and starting a flow of nitrogen through both outer channels. A sequence of 30 frames was taken, at 15 fps, in the center of the channel. This was repeated every 15 seconds for approximately 10 minutes, then one of the nitrogen gas lines was switched to oxygen, and the experiment continued for another 10 minutes.}
 \end{figure}
 
 \begin{figure}[h!] 
