@@ -7,6 +7,7 @@
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{fancyref,multicol}
+\usepackage{fixltx2e}
 
 \title{A Microfluidic Device for Measuring Aerotaxis}
 \author{Kiarash Adl, Brian Djaja, Katarina Struckmann and Logan Williams}
@@ -46,7 +47,7 @@ Calibration was done optically using an Air Force Microscope Target and an image
 
 \subsection{The microfluidic device} % Logan or Kiarash?
 
-The microfluidic device is composed of the elastomeric material Polydimethylsiloxane (PDMS). The mask, a silicon wafer obtained from the MIT Environmental Microfluidics Group, was used in conjunction with UV-curing photopolymers to create a master mold for the PDMS devices. PDMS and its curing agent were mixed in a 10:1 ratio, respectively, and poured over the mold in a dish. The dish was degassed in a vacuum chamber and then cured for approximately 12 hours. After the PDMS had cured, the excess around the device was cut away, yielding the rectangular shape shown in \Fref{DevicePhoto}, and 0.050” holes were punched through the device to allow access to the ends of each channel. After the device was completed, one side was treated with oxygen plasma, and it was bonded to a glass slide.
+The microfluidic device is composed of the elastomeric material Polydimethylsiloxane (PDMS). The mask, a silicon wafer obtained from the MIT Environmental Microfluidics Group, was used in conjunction with UV-curing photopolymers to create a master mold for the PDMS devices. PDMS and its curing agent were mixed in a 10:1 ratio, respectively, and poured over the mold in a dish. The dish was degassed in a vacuum chamber and then cured for approximately 12 hours. After the PDMS had cured, the excess around the device was cut away, yielding the rectangular shape shown in \Fref{DevicePhoto}, and 0.050 holes were punched through the device to allow access to the ends of each channel. After the device was completed, one side was treated with oxygen plasma, and it was bonded to a glass slide.
 
 The device has three parallel channels formed by indentations in the PDMS; the glass slide creates the fourth wall of each channel, closing them. Each channel is 600 microns wide and 50 microns deep, with 200 microns of separation between each channel. Bacteria was injected into the center channel and allowed to settle before data collection began. Oxygen and nitrogen flows were directed down the outside channels. The devices were cleaned with isopropanol, which does not degrade the PDMS or the plasma bond, and reused for multiple experiments.
 
@@ -97,6 +98,17 @@ These lines have two different configurations during the experiment, providing e
       \caption[Bacterial motion]{Motion of motile bacteria divided into four quadrants, left (towards oxygen), right (towards nitrogen, up, and down.) This shows data from one representative experiment. \\
       
       This graph was produced by calculating the distance traveled and direction of travel for every bacteria ``track'' in each sequence of 30 frames. Bacteria that moved a significant amount were considered ``motile,'' all other bacteria were discarded. The bacteria were divided by dividing their motion into the four previously mentioned quadrants.}
+\end{figure}
+
+\begin{figure}[h!] 
+  \centering
+    \includegraphics[width=\textwidth]{plots/cum_motion.png}
+	\caption[Cumulative motion]{The cumulative percentage of net bacterial movement towards the oxygen side of the channel, averaged over 5 experimental trials. The x-axis is scaled relative to the number of visible bacteria in a single frame. \\
+      
+      This plot was produced by taking the cumulative sum of the difference between the ``left'' and ``right'' quadrants in the preceding figure. This sum is averaged over five trials. Error bars represent the standard deviation of that cumulative sum over the five trials (they grow with time because error is also being integrated in the cumulative sum). The size of the error bars is caused by a small $n$ (5), and integrated error. \\
+      
+      Note that there appears to be some drift prior to the gas line switch. This is likely due to random motion of the bacteria, and the large uncertainty in the data.}
+      
 \end{figure}
 
 \begin{figure}[h!] 
