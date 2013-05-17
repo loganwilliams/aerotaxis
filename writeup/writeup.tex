@@ -7,6 +7,8 @@
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{fancyref,multicol,fixltx2e}
+\usepackage{setspace}
+\onehalfspacing
 
 \title{A Microfluidic Device for Measuring Aerotaxis}
 \author{Kiarash Adl, Brian Djaja, Katarina Struckmann and Logan Williams}
@@ -195,8 +197,37 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
 
 
 \section{Discussion} % all of us
+% figure refs need to be changed
+% needs discussion of error sources
+
+B. cereus failed to react noticeably to aerotaxis, so  we went back to a bacteria that had a documented response. We chose B. cereus initially because it was easier to culture and obtain.
+
+B. subtilis did not react well to the initial fluorescent dye (SYTO 84 by Invitrogen), becoming non-motile and photobleaching quickly. Fluorescence imaging is much more effective for tracking the moving bacteria than brightfield, as bacteria can shift in and out of the focal plane easily. In brightfield, a bacteria shifting out of the focal plane will be lost by the tracking program, whereas in fluorescence, it has to shift a lot further from the focal plane to be lost.
+
+The membrane dye (FM4-64) also didn’t produce useable data due to similar problems with the SYTO 84, so brightfield tracking was revisited.
+
+The 10x objective was not sufficient for brightfield tracking, even though the depth of field was superior, so the 20x objective was utilized. Originally, images of each side of the channel were obtained over time to show the difference in bacterial concentration, but taking image data from the center of the channel will provide bacteria trajectories that are sufficient to discuss bacteria population movement.
+
+With all the data processing performed, it was clear that qualitatively, B. subtilis does exhibit aerotactic behavior. In Figure 5, it can be noted that B. subtilis does tend to move towards the oxygenated side of the channel over time. Figure 6 also supports this behavior as it shows that bacteria density increases over time on the oxygenated side of the channel (the left of the graphs). Figure 7 displays counts of trackable bacteria on both the nitrogen side of the channel compared with the oxygen side of the channel, showing that over time, the majority of the bacteria migrate towards the oxygen. Figure 8 also shows that bacteria on the oxygenated side of the channel move at a faster average speed than those on the nitrogen side, which makes sense, as aerotaxis is an energy taxis and B. subtilis is also a facultative anaerobe, preferring aerobic respiration. Error sources for the qualitative analysis include 
+
+However, attempts to utilize collected data to quantify the aerotactic response proved to be mostly futile. Basically, it was almost impossible to distinguish directed movement from random walks performed by the bacteria. In Figure 9, though there is noticeably more bacteria moving over time on the oxygen side, the directionality of both the oxygen and nitrogen sides are indistinguishable. The main reason for this lack of clarity is that brightfield tracking results in short bacteria tracks, as shown in Figure 12. These tracks are of varied lengths because bacteria would fall in and out of focus, either of which would disrupt the tracking program used to draw the tracks. There is no discernable difference or trend within each of the graphs as well. Figure 13 displays the motion of motile bacteria in 4 directions. Though there is more motion in the left/right directions than in up/down, there is still no significant difference between left and right in terms of overall trends. One would expect that aerotactic behavior would show an increase in leftwards (towards oxygen) motion over rightwards motion after the oxygen flow is turned on. However that is difficult to discern if at all in the graph.
+
+There are many possible paths to continue these experiments. The first step would be to develop a working fluorescence method to more accurately track bacteria movements. This would improve the quality of data acquired and allow longer tracks to be monitored, helping to better distinguish between random walk motion and aerotactic behavior. The data acquired with brightfield displays very short tracks, meaning the bacteria fell out of the focal plane before the end of the experiment.
+
+A second step to improve the experimental test bed would be to utilize a higher-quality microscope objective lens. This would improve the depth-of-field in the micrographs and also help with keeping bacteria relatively in focus, especially if fluorescence was utilized.
+
+Finally, the microfluidic device could be made of a more inert material, such as glass. This would serve to keep the bacteria from sticking to the walls of the channel; however, glass is not gas-permeable, which is a necessity for aerotactic studies in microfluidics. 
 
 \section{Conclusion}
+
+While B. cereus does not respond to aerotaxis, B. subtilis demonstrates a weak but distinguishable response. Its aerotactic behavior was visually verified, as the bacteria tended to move towards the oxygenated side of the channel and away from the nitrogenated side, as seen in figure [graph containing population tracking trend]. The unsuccessful fluorescence system impeded efforts to quantify the aerotactic response of B. subtilis and produce a model analogous to those for chemotaxis, but figure [gradient] clearly demonstrates a qualitative response that further experiments could successfully quantify.
+
+Our device provides a suitable testbed for conducting aerotaxis experiments, but it requires refinement to capture quantitative data. Some suggested improvements include a better fluorescence system using dye that does not impede bacterial movement or photobleach quickly, using a laser with a wavelength closer to the dye’s absorption peak. Improving the fluorescence system would improve the quality of tracking data, by allowing bacteria to be more reliably distinguished from the background, allowing additional insight into aerotactic behavior.
+
+\section{Acknowledgements}
+
+We’d like to thank Filippo Menolascina from the Center for Environmental Microfluidics for providing an introduction, masks, devices, supplies, and guidance throughout this project. We’d also like to thank Professor Nagle for assisting greatly with analysis of our data and the use of the 20.309 lab space, as well as ordering parts and supplies for us, and the 20.109 staff for allowing us to use their lab for bacteria culturing.
+
 
 \begin{thebibliography}{9}
 
