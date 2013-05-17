@@ -84,11 +84,11 @@ These lines have two different configurations during the experiment, providing e
 
 \subsection{Bacteria culturing} % Brian?
 
-The aerotactic responses of two species of Bacillus bacteria, \textit{B. cereus} and \textit{B. subtilis}, were tested. \textit{B. cereus} Frankland and Frankland (ATCC 14579) was rehydrated and streaked onto Luria-Bertani (LB) agar plates. After 24 hours of incubation at 37\celsius, colonies were inoculated into LB broth media, then incubated with shaking at 37\celsius  for 24 hours prior to experimentation.
+The aerotactic responses of two species of Bacillus bacteria, \textit{B. cereus} and \textit{B. subtilis}, were tested. \textit{B. cereus} Frankland and Frankland (ATCC 14579) was rehydrated and streaked onto Luria-Bertani (LB) agar plates. After 24 hours of incubation at 37$\celsius$, colonies were inoculated into LB broth media, then incubated with shaking at 37$\celsius$\ for 24 hours prior to experimentation.
 
-\textit{B. subtilis} (Strain OI1085, obtained from the Center for Environmental Microfluidics at MIT) was cultured according to a protocol obtained from Filippo Menolascina. A liquid culture of \textit{B. subtilis} was inoculated into Cap Assay Minimal (CAM), consisting of 50mM KPO\textsubscript{4}, 1mM MgCl\textsubscript{2}, 1mM NH\textsubscript{4}SO\textsubscript{4}, 1:1000 sporulation salt solution (0.14M CaCl\textsubscript{2}, 0.01M MnCl\textsubscript{2}, 0.20MgCl\textsubscript{2}), 1.82g/L sorbitol, 0.1g/L tryptone, 0.05g/L NaCl, and 0.015g/L of histidine, methionine, and tryptophan. The culture was then incubated at 37\celsius  with shaking. Bacteria were incubated for approximately 24 hours prior to experimentation.
+\textit{B. subtilis} (Strain OI1085, obtained from the Center for Environmental Microfluidics at MIT) was cultured according to a protocol obtained from Filippo Menolascina. A liquid culture of \textit{B. subtilis} was inoculated into Cap Assay Minimal (CAM), consisting of 50mM KPO\textsubscript{4}, 1mM MgCl\textsubscript{2}, 1mM NH\textsubscript{4}SO\textsubscript{4}, 1:1000 sporulation salt solution (0.14M CaCl\textsubscript{2}, 0.01M MnCl\textsubscript{2}, 0.20MgCl\textsubscript{2}), 1.82g/L sorbitol, 0.1g/L tryptone, 0.05g/L NaCl, and 0.015g/L of histidine, methionine, and tryptophan. The culture was then incubated at 37$\celsius$\  with shaking. Bacteria were incubated for approximately 24 hours prior to experimentation.
 
-Two different fluorescent dyes were tested: SYTO 84 and FM4-64, both from Invitrogen. SYTO 84 is a DNA dye and FM4-64 is a cell membrane dye. SYTO 84 was added to a final concentration of 5 micromolar with bacteria (within the manufacturerís suggestions for bacteria). FM4-64 was rehydrated using Hankís balanced salt solution (HBSS) as per manufacturerís directions, and added to a liquid culture of bacteria to a final dye concentration of 5 \mu g/mL.
+Two different fluorescent dyes were tested: SYTO 84 and FM4-64, both from Invitrogen. SYTO 84 is a DNA dye and FM4-64 is a cell membrane dye. SYTO 84 was added to a final concentration of 5 micromolar with bacteria (within the manufacturerís suggestions for bacteria). FM4-64 was rehydrated using Hankís balanced salt solution (HBSS) as per manufacturerís directions, and added to a liquid culture of bacteria to a final dye concentration of 5 $\mu$\ g/mL.
 
 \section{Results} % all of us
 
@@ -112,6 +112,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       \caption[Quantitative verification of aerotaxis]{These plots represent the same data as the panorama in Figure \ref{fig:gradient}, showing the density of bacteria laterally across the channel, prior to gas flow, 5 minutes after gas flow, and 10 minutes after gas flow. This shows that the gradient (the slope of the linear fit line) increases with time.\\
       
       These plots were produced from the panoramic image by summing each column in MATLAB, convolving with a rectangle function to smooth out discrete impulses, and using MATLAB to compute a linear fit.}
+      \label{fig:quantGradient}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -122,6 +123,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The number of ``tracks'' produced corresponds to the number of trackable bacteria. \\
       
       This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
+            \label{fig:trackNumber}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -132,6 +134,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       This plot was produced by finding bright centroids in captured microscope frames and tracking the motion of the centroids. The distance moved by each bacteria  ``track'' was averaged every minute (for each sequence of 30 frames). \\
       
             This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
+            \label{fig:speed}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -143,6 +146,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       This plot was produced by finding bright centroids in captured microscope frames and tracking the motion of the centroids. These ``tracks'' were analyzed to find the direction of movement of each bacteria from frame to frame. This list of directions of movement was then plotted as a histogram for each minute (30 frames) of captured data. \\
       
             This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps) every minute on both sides of the channel.}
+            \label{fig:hist_number}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -154,6 +158,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       This plot was produced by finding bright centroids in captured microscope frames and tracking the motion of the centroids. These ``tracks'' were analyzed to find the average speed of movement of each bacteria from frame to frame. This list of directions of movement was then plotted as a histogram for each minute (30 frames) of captured data. \\
       
             This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps) every minute on both sides of the channel.}
+            \label{fig:hist_speed}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -184,6 +189,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       This graph was produced by calculating the distance traveled and direction of travel for every bacteria ``track'' in each sequence of 30 frames. Bacteria that moved a significant amount were considered ``motile''; all other bacteria were discarded. The bacteria were divided by  categorizing their motion into the four previously mentioned quadrants. \\
       
       This experiment was conducted by placing bacteria in the center channel and starting a flow of nitrogen through both outer channels. A sequence of 30 frames was taken, at 15 fps, in the center of the channel. This was repeated every 15 seconds for approximately 10 minutes before one of the nitrogen gas lines was switched to oxygen; the experiment continued for another 10 minutes.}
+      \label{fig:tracks}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -194,6 +200,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       This plot was produced by taking the cumulative sum of the difference between the ``left'' and ``right'' quadrants in the preceding figure. This sum is averaged over five trials. Error bars represent the standard deviation of that cumulative sum over the five trials (they grow with time because error is also being integrated in the cumulative sum). The size of the error bars is caused by a small $n$ (5), and integrated error. \\
       
       Note that there appears to be some drift prior to the gas line switch. This is likely due to random motion of the bacteria and the large uncertainty in the data.}
+      \label{fig:directionalMotion}
       
 \end{figure}
 
@@ -217,9 +224,9 @@ The membrane dye (FM4-64) also did not produce useable data due to similar probl
 
 The 10X objective was not sufficient for brightfield tracking, even though the depth of field was superior, so the 20X objective was utilized. Originally, images of each side of the channel were obtained over time to show the difference in bacterial concentration, but taking image data from the center of the channel provided bacteria trajectories that are sufficient to discuss bacteria population movement.
 
-With all the data processing performed, it was clear that, qualitatively, \textit{B. subtilis} does exhibit aerotactic behavior. In Figure 5, it can be noted that \textit{B. subtilis} does tend to move towards the oxygenated side of the channel over time. Figure 6 also supports this behavior as it shows that bacteria density increases over time on the oxygenated side of the channel (the left of the graphs). Figure 7 displays counts of trackable bacteria on both the nitrogen side of the channel compared with the oxygen side of the channel, showing that over time, the majority of the bacteria migrate towards the oxygen. Figure 8 also shows that bacteria on the oxygenated side of the channel move at a faster average speed than those on the nitrogen side, which makes sense, as aerotaxis is an energy taxis and \textit{B. subtilis} is also a facultative anaerobe, preferring aerobic respiration. Error sources for the qualitative analysis include \textbf{\emph{ERROR HERE}}
+With all the data processing performed, it was clear that, qualitatively, \textit{B. subtilis} does exhibit aerotactic behavior. In Figure \ref{fig:gradient}, it can be seen that \textit{B. subtilis} does tend to move towards the oxygenated side of the channel over time. Figure \ref{fig:quantGradient} also supports this behavior as it shows that bacteria density increases over time on the oxygenated side of the channel (the left of the graphs). Figure \ref{fig:trackNumber} displays counts of trackable bacteria on both the nitrogen side of the channel compared with the oxygen side of the channel, showing that over time, the majority of the bacteria migrate towards the oxygen. Figure \ref{fig:speed} also shows that bacteria on the oxygenated side of the channel move at a faster average speed than those on the nitrogen side, which makes sense, as aerotaxis is an energy taxis and \textit{B. subtilis} is also a facultative anaerobe, preferring aerobic respiration. Error sources for the qualitative analysis include \textbf{\emph{ERROR HERE}}
 
-However, attempts to utilize collected data to quantify the aerotactic response proved to be futile. Directed movement could not be distinguished from random walks performed by the bacteria. In Figure 9, though there is noticeably more bacteria moving over time on the oxygen side, the directionality of both the oxygen and nitrogen sides are indistinguishable. The main reason for this lack of clarity is that brightfield tracking results in short bacteria tracks, as shown in Figure 12. These tracks are of varied lengths because bacteria  fell in and out of focus, both of which disrupted the tracking program used to draw the tracks. There is no discernable difference or trend within each of the graphs as well. Figure 13 displays the motion of motile bacteria in 4 directions. Though there is more motion in the left/right directions than in up/down, there is still no significant difference between left and right in terms of overall trends. One would expect that aerotactic behavior would show an increase in leftwards (towards oxygen) motion over rightwards motion after the oxygen flow is turned on. However that is difficult to discern from the graph.
+However, attempts to utilize collected data to quantify the aerotactic response proved to be futile. Directed movement could not be distinguished from random walks performed by the bacteria. Though there is noticeably more bacteria moving over time on the oxygen side, in Figure \ref{fig:hist_speed} the directionality of both the oxygen and nitrogen sides are indistinguishable. The main reason for this lack of clarity is that brightfield tracking results in short bacteria tracks, as shown in Figure \ref{fig:tracks}. These tracks are of varied lengths because bacteria  fell in and out of focus, both of which disrupted the tracking program used to draw the tracks. There is no discernable difference or trend within each of the graphs as well. Figure \ref{fig:directionalMotion} displays the motion of motile bacteria in four directions. Though there is more motion in the left/right directions than in up/down, there is still no significant difference between left and right in terms of overall trends. One would expect that aerotactic behavior would show an increase in leftwards (towards oxygen) motion over rightwards motion after the oxygen flow is turned on. However that is difficult to discern from the graph.
 
 There are many possible paths to continue these experiments. The first step is to develop a working fluorescence method to more accurately track bacteria movements outside the focal plane. This would improve the quality of data acquired and allow longer tracks to be monitored, helping to better distinguish between random walk motion and aerotactic behavior.
 
@@ -235,7 +242,7 @@ Our device provides a suitable testbed for conducting aerotaxis experiments, but
 
 \section{Acknowledgements}
 
-We’d like to thank Filippo Menolascina from the Center for Environmental Microfluidics for providing an introduction, masks, devices, supplies, and guidance throughout this project. We’d also like to thank Professor Nagle for assisting greatly with analysis of our data and the use of the 20.309 lab space, as well as ordering parts and supplies for us, and the 20.109 staff for allowing us to use their lab for bacteria culturing.
+We would like to thank Filippo Menolascina from the Center for Environmental Microfluidics for providing an introduction, masks, devices, supplies, and guidance throughout this project. We’d also like to thank Professor Nagle for assisting greatly with analysis of our data and the use of the 20.309 lab space, as well as ordering parts and supplies for us, and the 20.109 staff for allowing us to use their lab for bacteria culturing.
 
 
 \begin{thebibliography}{9}
