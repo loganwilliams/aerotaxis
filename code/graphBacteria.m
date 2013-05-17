@@ -12,7 +12,7 @@ to_dx = [];
 tn_dx = [];
 allX = [];
 
-trackParam=struct('mem',0,'dim',2,'good',15,'quiet',0);
+trackParam=struct('mem',0,'dim',2,'good',3,'quiet',0);
 
 switch id
     
@@ -26,26 +26,30 @@ switch id
         
     case 1  
         nCount=[];
-%         oCount=[];
+        oCount=[];
+
         for i = 0:nFrames
             n_name = ['samp_' num2str((i*15)) '.mat'];
             cents=kiacentroids(n_name,4,40,200,0.75,0.5,0,...
-                               folder);
+                               'C:/aerotaxis/data/5-1_5/');
             tracks=track(cents,15,trackParam);
             nCount=[nCount max(tracks(:,4))];
-
-%             n_name = ['sa_' num2str((i*15)) '.mat'];
-%             cents=kiacentroids(n_name, 4,40,200,0.6,0.5,1,...
-%                                folder);
-%             trackParam=struct('mem',0,'dim',2,'good',5,'quiet',0);
-%             tracks=track(cents,15,trackParam);
-%             oCount=[oCount max(tracks(:,4))];
         end    
+        
+        for i = 0:nFrames
+            n_name = ['samp_' num2str((i*15)) '.mat'];
+            cents=kiacentroids(n_name,4,40,200,0.75,0.5,0,...
+                               'C:/aerotaxis/data/5-2_5/');
+            tracks=track(cents,15,trackParam);
+            nCount=[nCount max(tracks(:,4))];
+        end    
+        
         plot(nCount,'-ro')
         xlabel('Time  (x 15 seconds)');
         ylabel('Number of Bacteria visible in minimum of 3 continuous frames');
         title(['Change of Number of Bacteria Over Time']);
-        vline(switchPoint, 'b', 'Replacing N2 with O2');
+        vline(44, 'b', 'Replacing N2 with O2');
+        
         %hold on
         %plot([44,44],[0,1000],'r');
         %hold off
@@ -62,25 +66,27 @@ switch id
         nAvg=[];
         oAvg=[];
         for i = 0:nFrames
-%             n_name = ['N2_' num2str(i) '.mat'];
-%             cents=kiacentroids(n_name, 4, 30, 200, 0.8,0.65,0,...
-%                                folder);
-%             trackParam=struct('mem',0,'dim',2,'good',5,'quiet',0);
-%             tracks=track(cents,15,trackParam);
-%             V=findV(tracks(:,[1,2,4]));
-%             nAvg=[nAvg;mean(V(:,1))];
             n_name = ['samp_' num2str((i*15)) '.mat'];
             cents=kiacentroids(n_name,4,40,200,0.75,0.5,0,...
-                               folder);
+                               'C:/aerotaxis/data/5-1_5/');
             tracks=track(cents,15,trackParam);
             V=findV(tracks(:,[1,2,4]));
             oAvg=[oAvg;mean(V(:,1))];            
         end    
+        for i = 0:nFrames
+            n_name = ['samp_' num2str((i*15)) '.mat'];
+            cents=kiacentroids(n_name,4,40,200,0.75,0.5,0,...
+                               'C:/aerotaxis/data/5-2_5/');
+            tracks=track(cents,15,trackParam);
+            V=findV(tracks(:,[1,2,4]));
+            oAvg=[oAvg;mean(V(:,1))];            
+        end         
+        
         plot(oAvg,'-ro')
         xlabel('Time (x 15 seconds)');
         ylabel('Average Speed');
         title(['Change of Avg. Speed Over Time']);
-        vline(switchPoint, 'b', 'Replacing N2 with O2');
+        vline(44, 'b', 'Replacing N2 with O2');
         
 %         hold on
 %         plot(nAvg,'-xb')
