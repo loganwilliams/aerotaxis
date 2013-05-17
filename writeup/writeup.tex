@@ -61,7 +61,7 @@ Calibration was done optically using an Air Force Microscope Target and an image
 \begin{figure} 
 	\centering
     \includegraphics[width=\textwidth]{plots/Device.jpg}
-	\caption{The microfluidic device. It is composed of PDMS, a silicone-like polymer, and features 3 channels parallel to each other. The center channel holds the bacteria; the two outer channels, thinner than the bacteria channel, direct the gas flow. PDMS is gas-permeable, so the gas will diffuse into the center channel where the bacteria are located.}
+	\caption{The microfluidic device. It is composed of PDMS, a silicone-like polymer, and features 3 channels parallel to each other. The center channel holds the bacteria, while the two outer channels direct the gas flow. PDMS is gas-permeable, so the gas will diffuse into the center channel where the bacteria are located.}
 	\label{fig:Device}
 \end{figure}
 
@@ -201,7 +201,16 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       
       Note that there appears to be some drift prior to the gas line switch. This is likely due to random motion of the bacteria and the large uncertainty in the data.}
       \label{fig:directionalMotion}
+\end{figure}
+
+\begin{figure}[p!] 
+  \centering
+    \includegraphics[width=\textwidth]{plots/total_count.jpg}
+	\caption{The number of trackable bacteria in the middle of the channel on 4 different trials of the experiment. This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The number of ``tracks'' produced corresponds to the number of trackable bacteria. \\
+	
+			Unforuntaly, although trial 1 and last trial represent our expectations, the other two trials show a totally oposite point. This suggests that there must have been some evalutation problem in our system. This could be fix in the future experiments by haivng more controls over light as well as having photos of fix and moving beads to test the software. \\ 
       
+      This experiment was conducted by placing bacteria in the center channel, and starting a flow of nitrogen through both outer channels. A sequence of 30 frames was taken, at 15 fps, in the center of the channel. This was repeated every 15 seconds for approximately 10 minutes, then one of the nitrogen gas lines was switched to oxygen, and the experiment continued for another 10 minutes.}
 \end{figure}
 
 \newpage
