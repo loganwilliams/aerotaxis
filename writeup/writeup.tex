@@ -6,7 +6,7 @@
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
-\usepackage{fancyref,multicol,fixltx2e}
+\usepackage{fancyref,multicol,fixltx2e,gensymb}
 \usepackage{setspace}
 \onehalfspacing
 
@@ -25,21 +25,21 @@ Bacteria rely heavily on sensing environmental gradients to survive and reproduc
 
 \section{Introduction}
 
-The movement of bacteria in response to a gas gradient, aerotaxis, is a field that has emerged within the past 15 years \cite{15years}. As such, it has not been studied to the extent of the similar process chemotaxis. Chemotaxis is the movement of bacteria in response to a chemical gradient, where the chemical can be anything from food to toxic molecules. Models for chemotaxis in bacteria have been characterized, both for populations and single bacterial cells \cite{modelI} \cite{modelII}.
+The movement of bacteria in response to a gas gradient, aerotaxis, is a field that has emerged within the past 15 years \cite{15years}. As such, it has not been studied to the extent of the similar process chemotaxis. Chemotaxis is the movement of bacteria in response to a chemical gradient, where the chemical can be anything from food to toxic molecules. Models for chemotaxis in bacteria have been characterized both for populations and single bacterial cells \cite{modelI} \cite{modelII}.
 
 Aerotaxis was studied in a microfluidic device using a custom optical microscope. The microfluidic device allowed for development of a gas gradient along its length; the bacteria’s response to the gradient was visualized with the microscope. This setup can be utilized for studying different bacteria species and potentially other cell types. 
 
-Aerotaxis has a broad range of applications; the signaling proteins utilized in for aerotactic responses in bacteria can be potentially engineered for turning on gene expression in the presence of a certain oxygen concentration, or lack thereof. Since aerotaxis occurs on the order of minutes, a response can be expressed fairly quickly. Additionally, modeling aerotaxis is key to understanding how applications such as the aforementioned can be utilized.
+Aerotaxis has a broad range of applications; the signaling proteins utilized in for aerotactic responses in bacteria can be engineered for turning on gene expression in the presence of a certain oxygen concentration, or lack thereof. Since aerotaxis occurs on the order of minutes, a response can be expressed fairly rapidly. Additionally, modeling aerotaxis is key to understanding how applications such as the aforementioned can be utilized.
 
 \section{Experimental apparatus}
 \begin{figure} 
 	\centering
     \includegraphics[width=\textwidth]{plots/Setup.jpg}
-	\caption{The full experimental setup. The microfluidic device is on the stage of the microscope, which was custom-built for these experiments. The gas regulators allow for controlled flow of O\textsubscript{2} and N\textsubscript{2} gas into the device via syringe tips inserted into the device inlets.}
+	\caption{The full experimental setup. The microfluidic device is on the stage of the microscope, which was custom-built for these experiments. The gas regulators allow for controlled flow of O\textsubscript{2} and N\textsubscript{2} gas into the device via syringe tips inserted into access holes in the device.}
 	\label{fig:SetupPhoto}
 \end{figure}
 
-The aerotaxis experiments are run in a microfluidic device that contains the bacteria and the gases, nitrogen and oxygen, in parallel channels separated by thin layers of PDMS that are permeable to the gases. The device is located on the stage of a custom-built fluorescence microscope. A photo of the overall setup is shown in Figure \ref{fig:SetupPhoto}.
+The aerotaxis experiments were run in a microfluidic device that contained the bacteria and the gases, nitrogen and oxygen, in parallel channels separated by thin layers of PDMS permeable to the gases. The device is located on the stage of a custom-built fluorescence microscope. A photo of the overall setup is shown in Figure \ref{fig:SetupPhoto}.
 
 \subsection{The microscope}
 
@@ -54,14 +54,14 @@ The microscope used for the project is a standard 4f microscope with 200mm Nikon
 
 A fluorescence pathway was also built to aid in cell tracking. The fluorescence illumination is provided by a 532 nm green laser source, which is expanded and then focused onto the surface of the objective in order to produce a collimated beam on the sample. A dichroic mirror reflects laser light onto the sample while allowing light emitted by fluorescence to pass through to the CCD.
 
-Calibration was done optically using an Air Force Microscope Target and an image capture program to verify the magnification. By measuring the pixels in a photograph of a known distance, and knowing the dimensions of the imager in the CCD, the magnification can be calculated.
+Calibration was done optically using an Air Force Microscope Target and an image capture program to verify the magnification. The magnification was calculated from measurements of the pixels in a photograph of a known distance and the dimensions of the imager in the CCD, .
 
 \subsection{The microfluidic device} % Logan or Kiarash?
 
 \begin{figure} 
 	\centering
     \includegraphics[width=\textwidth]{plots/Device.jpg}
-	\caption{The microfluidic device. It is composed of PDMS, a silicone-like polymer, and features 3 channels parallel to each other. The center is wider and holds the bacteria, while the other two are thinner and flow gas through them. PDMS is gas-permeable, so the gas will diffuse into the center channel where the bacteria are located.}
+	\caption{The microfluidic device. It is composed of PDMS, a silicone-like polymer, and features 3 channels parallel to each other. The center channel holds the bacteria; the two outer channels, thinner than the bacteria channel, direct the gas flow. PDMS is gas-permeable, so the gas will diffuse into the center channel where the bacteria are located.}
 	\label{fig:Device}
 \end{figure}
 
@@ -74,11 +74,11 @@ The device has three parallel channels formed by indentations in the PDMS; the g
 \begin{figure} 
 	\centering
     \includegraphics[width=\textwidth]{plots/GasFlow.png}
-	\caption{The gas flow path, from the cylinders to the microfluidic device, which ultimately exhausts to air. The gas lines switch, providing N2 to one microfluidic gas channel and either N2 or O2 to the other gas channel, depending on the experiment phase.}
+	\caption{The gas flow path, from the cylinders to the microfluidic device, which ultimately exhausts to air. The gas lines switch, providing N\textsubscript{2} to one microfluidic gas channel and either N\textsubscript{2} or O\textsubscript{2} to the other gas channel, depending on the experiment phase.}
 	\label{fig:GasFlow}
 \end{figure}
 
-The essence of aerotaxis is the gas gradient to which bacteria respond. The gas gradient was achieved by routing oxygen and nitrogen through the outside microfluidic channels parallel to the bacteria chamber. Both gases originate in storage cylinders attached to primary regulators. These regulators drop the gas pressure from about 2000 psi to 25 psi. After exiting the primary regulator, each gas flows through 1/8'' ID Tygon E-3603 tubing to a secondary regulator that drops the pressure further, providing 2 psi to the lines connected to the device.
+The essence of aerotaxis is the gas gradient to which bacteria respond. The gas gradient was achieved by routing oxygen and nitrogen through the outside microfluidic channels parallel to the bacteria channel. Both gases originate in storage cylinders attached to primary regulators. These regulators drop the gas pressure from 2000 psi to 25 psi. After exiting the primary regulator, each gas flows through 1/8'' ID Tygon E-3603 tubing to a secondary regulator that drops the pressure further, providing 2 psi to the lines connected to the device.
 
 These lines have two different configurations during the experiment, providing either N\textsubscript{2} to one microfluidic gas channel and O\textsubscript{2} to the other, or providing N\textsubscript{2} to both microfluidic gas channels. These configurations are shown in Figure \ref{fig:GasFlow} as a switch. Two lines of tubing interface with the device via Luer lock fittings attached to 0.050'' OD syringe tips that mate with 0.050'' ID access holes in the PDMS. One of these two lines is permanently connected to the nitrogen flow through a T-junction. The other line switches between the T-junction and the secondary O\textsubscript{2} regulator, depending on the experiment phase.  The gases flow through the device, diffusing into the PDMS to reach the bacteria chamber, and ultimately exhaust to the environment through the access holes at the channels’ other ends.
 
@@ -92,7 +92,8 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
     \includegraphics[width=\textwidth]{plots/contrast.png}
       \caption[Visual verification of aerotaxis]{This micrographic ``panorama'' shows the entire width of the center channel, thresholded to highlight bacteria. Note that prior to flowing oxygen and nitrogen, the bacteria are evenly distributed in the channel. 5 minutes after gas flow began, bacteria have begun to accumulate on the oxygenated side of the channel (the right hand side). \\
       
-      This experiment was conducted by placing bacteria in the channel and taking several micrographs across the channel, then combining them and performing thresholding in Adobe Photoshop. Gas flow was started and the process was repeated after 5 minutes and after minutes.}
+      This experiment was conducted by placing bacteria in the channel and taking several micrographs across the channel, then combining them and performing thresholding in Adobe Photoshop. The process was repeated 5 minutes and 10 minutes after gas flow started.}
+      \label{}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -101,7 +102,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
      \includegraphics[width=0.49\textwidth]{plots/5min_new.png}
     \includegraphics[width=0.49\textwidth]{plots/10min_new.png}
 
-      \caption[Quantitative verification of aerotaxis]{These plots represent the same data as the panorama in the previous figure, showing the density of bacteria laterally across the channel, prior to gas flow, 5 minutes after gas flow, and 10 minutes after gas flow. This shows that the gradient (slope of linear fit line), increases with time.\\
+      \caption[Quantitative verification of aerotaxis]{These plots represent the same data as the panorama in Figure \ref{}, showing the density of bacteria laterally across the channel, prior to gas flow, 5 minutes after gas flow, and 10 minutes after gas flow. This shows that the gradient (slope of linear fit line), increases with time.\\
       
       These plots were produced from the panoramic image by summing each column in MATLAB, convolving with a rectangle function to smooth out discrete impulses, and using MATLAB to compute a linear fit.}
 \end{figure}
