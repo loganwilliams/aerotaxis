@@ -93,7 +93,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       \caption[Visual verification of aerotaxis]{This micrographic ``panorama'' shows the entire width of the center channel, thresholded to highlight bacteria. Note that prior to flowing oxygen and nitrogen, the bacteria are evenly distributed in the channel. 5 minutes after gas flow began, bacteria have begun to accumulate on the oxygenated side of the channel (the right hand side). \\
       
       This experiment was conducted by placing bacteria in the channel and taking several micrographs across the channel, then combining them and performing thresholding in Adobe Photoshop. The process was repeated 5 minutes and 10 minutes after gas flow started.}
-      \label{}
+      \label{fig:gradient}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -102,7 +102,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
      \includegraphics[width=0.49\textwidth]{plots/5min_new.png}
     \includegraphics[width=0.49\textwidth]{plots/10min_new.png}
 
-      \caption[Quantitative verification of aerotaxis]{These plots represent the same data as the panorama in Figure \ref{}, showing the density of bacteria laterally across the channel, prior to gas flow, 5 minutes after gas flow, and 10 minutes after gas flow. This shows that the gradient (slope of linear fit line), increases with time.\\
+      \caption[Quantitative verification of aerotaxis]{These plots represent the same data as the panorama in Figure \ref{fig:gradient}, showing the density of bacteria laterally across the channel, prior to gas flow, 5 minutes after gas flow, and 10 minutes after gas flow. This shows that the gradient (the slope of the linear fit line) increases with time.\\
       
       These plots were produced from the panoramic image by summing each column in MATLAB, convolving with a rectangle function to smooth out discrete impulses, and using MATLAB to compute a linear fit.}
 \end{figure}
