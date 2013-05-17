@@ -80,7 +80,7 @@ The device has three parallel channels formed by indentations in the PDMS; the g
 
 The essence of aerotaxis is the gas gradient to which bacteria respond. The gas gradient was achieved by routing oxygen and nitrogen through the outside microfluidic channels parallel to the bacteria channel. Both gases originate in storage cylinders attached to primary regulators. These regulators drop the gas pressure from 2000 psi to 25 psi. After exiting the primary regulator, each gas flows through 1/8'' ID Tygon E-3603 tubing to a secondary regulator that drops the pressure further, providing 2 psi to the lines connected to the device.
 
-These lines have two different configurations during the experiment, providing either N\textsubscript{2} to one microfluidic gas channel and O\textsubscript{2} to the other, or providing N\textsubscript{2} to both microfluidic gas channels. These configurations are shown in Figure \ref{fig:GasFlow} as a switch. Two lines of tubing interface with the device via Luer lock fittings attached to 0.050'' OD syringe tips that mate with 0.050'' ID access holes in the PDMS. One of these two lines is permanently connected to the nitrogen flow through a T-junction. The other line switches between the T-junction and the secondary O\textsubscript{2} regulator, depending on the experiment phase.  The gases flow through the device, diffusing into the PDMS to reach the bacteria chamber, and ultimately exhaust to the environment through the access holes at the channels’ other ends.
+These lines have two different configurations during the experiment, providing either N\textsubscript{2} to one microfluidic gas channel and O\textsubscript{2} to the other, or providing N\textsubscript{2} to both microfluidic gas channels. These configurations are shown in Figure \ref{fig:GasFlow} as a switch. Two lines of tubing interface with the device via Luer lock fittings attached to 0.050'' OD syringe tips that mate with 0.059'' ID access holes in the PDMS. One of these two lines is permanently connected to the nitrogen flow through a T-junction. The other line switches between the T-junction and the secondary O\textsubscript{2} regulator, depending on the experiment phase.  The gases flow through the device, diffusing into the PDMS to reach the bacteria chamber, and ultimately exhaust to the environment through the access holes at the channels’ other ends.
 
 \subsection{Bacteria culturing} % Brian?
 \section{Results} % all of us
@@ -120,9 +120,9 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
 \begin{figure}[p!] 
   \centering
     \includegraphics[width=\textwidth]{plots/average_speed.png}
-      \caption[Speed of trackable bacteria]{The speed of trackable bacteria adjacent on the nitrogen side of the channel as compared to the number on the oxygen side. The large ``spike'' at 7 minutes is due to the table being bumped, creating drift -- this error source is discussed later in the report.\\
+      \caption[Speed of trackable bacteria]{The speed of trackable bacteria adjacent to the nitrogen side of the channel as compared to the number on the oxygen side. The large spike at 7 minutes is due to the table being bumped, creating drift -- this error source is discussed later in the report.\\
       
-      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. The distance moved by each bacteria  ``track'' was averaged every minute (for each sequence of 30 frames). \\
+      This plot was produced by finding bright centroids in captured microscope frames and tracking the motion of the centroids. The distance moved by each bacteria  ``track'' was averaged every minute (for each sequence of 30 frames). \\
       
             This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
 \end{figure}
@@ -131,22 +131,22 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
   \centering
     \includegraphics[width=0.9\textwidth]{plots/directions_hist_N2.png}
     \includegraphics[width=0.9\textwidth]{plots/directions_hist_O2.png}    
-      \caption[Histogram of direction of movement]{Histograms of direction of movement of bacteria on the nitrogen side of the channel (top), and on the oxygen side (bottom). Note that there is no discernible trend towards a particular direction in either case. \\
+      \caption[Histogram of direction of movement]{Histograms of direction of movement of bacteria on the nitrogen side of the channel (top) and on the oxygen side (bottom). Note that there is no discernible trend towards a particular direction in either case. \\
       
-      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. These ``tracks'' were analyzed to find the direction of movement of each bacteria from frame to frame. This list of directions of movement was then plotted as a histogram for each minute (30 frames) of captured data. \\
+      This plot was produced by finding bright centroids in captured microscope frames and tracking the motion of the centroids. These ``tracks'' were analyzed to find the direction of movement of each bacteria from frame to frame. This list of directions of movement was then plotted as a histogram for each minute (30 frames) of captured data. \\
       
-            This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
+            This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps) every minute on both sides of the channel.}
 \end{figure}
 
 \begin{figure}[p!] 
   \centering
     \includegraphics[width=0.86\textwidth]{plots/histograms_N2.png}
     \includegraphics[width=0.86\textwidth]{plots/histograms_O2.png}    
-      \caption[Histogram of speed of movement]{Histograms of speed of bacterial movement on the nitrogen side of the channel (top), and on the oxygen side (bottom). Note that there is no discernible change over time in either case. Note also that a significant number of bacteria have speeds very close to zero. This is due to the ``stickiness'' of PDMS, a problem which was later rectified by coating the PDMS channel in bovine serum albumin (BSA), which acts to lubricate the channel. \\
+      \caption[Histogram of speed of movement]{Histograms of speed of bacterial movement on the nitrogen side of the channel (top) and on the oxygen side (bottom). Note that there is no discernible change over time in either case. Note also that a significant number of bacteria have speeds very close to zero. This is due to the ``stickiness'' of PDMS, a problem which was later rectified by coating the PDMS channel in bovine serum albumin (BSA), which acts to lubricate the channel. \\
       
-      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. These ``tracks'' were analyzed to find the average speed of movement of each bacteria from frame to frame. This list of directions of movement was then plotted as a histogram for each minute (30 frames) of captured data. \\
+      This plot was produced by finding bright centroids in captured microscope frames and tracking the motion of the centroids. These ``tracks'' were analyzed to find the average speed of movement of each bacteria from frame to frame. This list of directions of movement was then plotted as a histogram for each minute (30 frames) of captured data. \\
       
-            This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps), every minute, on both sides of the channel.}
+            This experiment was conducted by placing bacteria in the center channel, running gas through the outer channels, and taking 30 sequential frames (at 15 fps) every minute on both sides of the channel.}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -154,9 +154,9 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
     \includegraphics[width=\textwidth]{plots/speed_histogram.jpg}
       \caption[Histogram of bacteria speed]{The distribution of  speed of bacteria in a channel coated with BSA, at three points in time --- while flowing nitrogen through both gas channels, while flowing nitrogen through one gas channel and oxygen through the other, and while transitioning between the two flows.\\
       
-      This plot was produced by finding bright centroids in captured microscope frames, and tracking the motion of the centroids. Then, a histogram was produced of the distribution of the amount of movement of each bacteria between subsequent frames. \\
+      This plot was produced by finding bright centroids in captured microscope frames and tracking the motion of the centroids. A histogram was produced of the distribution of the amount of movement of each bacteria between subsequent frames. \\
       
-            This experiment was conducted by placing bacteria in the center channel, and starting a flow of nitrogen through both outer channels. A sequence of 30 frames was taken, at 15 fps, in the center of the channel. This was repeated every 15 seconds for approximately 10 minutes, then one of the nitrogen gas lines was switched to oxygen, and the experiment continued for another 10 minutes.}
+            This experiment was conducted by placing bacteria in the center channel, and starting a flow of nitrogen through both outer channels. A sequence of 30 frames was taken, at 15 fps, in the center of the channel. This was repeated every 15 seconds for approximately 10 minutes before one of the nitrogen gas lines was switched to oxygen; the experiment continued for another 10 minutes.}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -166,17 +166,17 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
     \includegraphics[width=0.5\textwidth]{plots/tracks_3.png}
       \caption[Representative traces]{Representative traces of bacteria motion. \\
       
-      These plots were produced by finding bright centroids in captured microscope frames, and then finding centroids in sequential frames that are likely to belong to the same bacteria. These are plotted prior to gas flow switch, just after gas flow switch, and several minutes after gas flow switch, though no difference is apparent visually.}
+      These plots were produced by finding bright centroids in captured microscope frames and finding centroids in sequential frames that are likely to belong to the same bacteria. These are plotted prior to gas flow switch, just after gas flow switch, and several minutes after gas flow switch. No difference is apparent visually.}
 \end{figure}
 
 \begin{figure}[p!] 
   \centering
     \includegraphics[width=\textwidth]{plots/direction.png}
-      \caption[Bacterial motion]{Motion of motile bacteria divided into four quadrants, left (towards oxygen), right (towards nitrogen, up, and down.) This shows data from one representative experiment. \\
+      \caption[Bacterial motion]{Motion of motile bacteria divided into four quadrants: left (towards oxygen), right (towards nitrogen), up, and down. This shows data from one representative experiment. \\
       
-      This graph was produced by calculating the distance traveled and direction of travel for every bacteria ``track'' in each sequence of 30 frames. Bacteria that moved a significant amount were considered ``motile,'' all other bacteria were discarded. The bacteria were divided by dividing their motion into the four previously mentioned quadrants. \\
+      This graph was produced by calculating the distance traveled and direction of travel for every bacteria ``track'' in each sequence of 30 frames. Bacteria that moved a significant amount were considered ``motile''; all other bacteria were discarded. The bacteria were divided by  categorizing their motion into the four previously mentioned quadrants. \\
       
-      This experiment was conducted by placing bacteria in the center channel, and starting a flow of nitrogen through both outer channels. A sequence of 30 frames was taken, at 15 fps, in the center of the channel. This was repeated every 15 seconds for approximately 10 minutes, then one of the nitrogen gas lines was switched to oxygen, and the experiment continued for another 10 minutes.}
+      This experiment was conducted by placing bacteria in the center channel and starting a flow of nitrogen through both outer channels. A sequence of 30 frames was taken, at 15 fps, in the center of the channel. This was repeated every 15 seconds for approximately 10 minutes before one of the nitrogen gas lines was switched to oxygen; the experiment continued for another 10 minutes.}
 \end{figure}
 
 \begin{figure}[p!] 
@@ -186,7 +186,7 @@ Relevant plots and micrographs, as well as the experimental methods and data pro
       
       This plot was produced by taking the cumulative sum of the difference between the ``left'' and ``right'' quadrants in the preceding figure. This sum is averaged over five trials. Error bars represent the standard deviation of that cumulative sum over the five trials (they grow with time because error is also being integrated in the cumulative sum). The size of the error bars is caused by a small $n$ (5), and integrated error. \\
       
-      Note that there appears to be some drift prior to the gas line switch. This is likely due to random motion of the bacteria, and the large uncertainty in the data.}
+      Note that there appears to be some drift prior to the gas line switch. This is likely due to random motion of the bacteria and the large uncertainty in the data.}
       
 \end{figure}
 
